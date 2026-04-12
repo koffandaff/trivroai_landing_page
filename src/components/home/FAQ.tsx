@@ -32,10 +32,10 @@ export const FAQ = () => {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4 tracking-tight">
             Got Questions? <span className="text-gradient-accent">We Have Answers</span>
           </h2>
-          <p className="text-white/45 text-base leading-relaxed">
+          <p className="text-muted text-base leading-relaxed">
             The most common questions about building your in-house AI marketing system.
           </p>
         </motion.div>
@@ -45,12 +45,12 @@ export const FAQ = () => {
             <div key={idx}>
               <button
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
-                className="w-full flex items-center justify-between px-8 py-6 text-left hover:bg-white/[0.02] transition-colors cursor-pointer"
+                className="w-full flex items-center justify-between px-8 py-6 text-left hover:bg-foreground/[0.02] transition-colors cursor-pointer"
               >
-                <span className="text-base font-semibold text-white pr-4">{faq.q}</span>
+                <span className="text-base font-semibold text-foreground pr-4">{faq.q}</span>
                 <ChevronDown
                   size={18}
-                  className={`text-white/40 shrink-0 transition-transform duration-300 ${
+                  className={`text-muted shrink-0 transition-transform duration-300 ${
                     openIndex === idx ? "rotate-180" : ""
                   }`}
                 />
@@ -64,7 +64,7 @@ export const FAQ = () => {
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <p className="px-8 pb-6 text-sm text-white/45 leading-relaxed">
+                    <p className="px-8 pb-6 text-sm text-muted leading-relaxed">
                       {faq.a}
                     </p>
                   </motion.div>

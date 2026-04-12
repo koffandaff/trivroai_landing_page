@@ -13,7 +13,7 @@ function ElegantShape({
     width = 400,
     height = 100,
     rotate = 0,
-    gradient = "from-white/[0.08]",
+    gradient = "from-foreground/[0.08]",
 }: {
     className?: string;
     delay?: number;
@@ -62,7 +62,7 @@ function ElegantShape({
                         "absolute inset-0 rounded-full",
                         "bg-gradient-to-r to-transparent",
                         gradient,
-                        "backdrop-blur-[2px] border-2 border-white/[0.08]",
+                        "backdrop-blur-[2px] border-2 border-foreground/[0.08]",
                         "shadow-[0_8px_32px_0_rgba(0,0,0,0.5)]",
                         "after:absolute after:inset-0 after:rounded-full",
                         "after:bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_70%)]"
@@ -97,7 +97,7 @@ export function HeroGeometric({
 
     return (
         <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-background">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#E5D08C]/[0.02] via-transparent to-white/[0.02] blur-3xl" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#E5D08C]/[0.02] via-transparent to-foreground/[0.02] blur-3xl" />
 
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <ElegantShape
@@ -132,7 +132,7 @@ export function HeroGeometric({
                     width={200}
                     height={60}
                     rotate={20}
-                    gradient="from-white/[0.05]"
+                    gradient="from-foreground/[0.05]"
                     className="right-[15%] md:right-[20%] top-[10%] md:top-[15%]"
                 />
 
@@ -153,7 +153,7 @@ export function HeroGeometric({
                         variants={fadeUpVariants}
                         initial="hidden"
                         animate="visible"
-                        className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.08] mb-8 md:mb-12"
+                        className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-foreground/[0.03] border border-foreground/[0.08] mb-8 md:mb-12"
                     >
                         <Circle className="h-2 w-2 fill-[#E5D08C] stroke-none" />
                         <span className="text-sm text-foreground-muted tracking-wide">
@@ -168,7 +168,7 @@ export function HeroGeometric({
                         animate="visible"
                     >
                         <h1 className="text-5xl sm:text-7xl md:text-8xl font-medium mb-6 md:mb-8 tracking-tight leading-[1.05]">
-                            <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60">
+                            <span className="bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/60">
                                 {title1}
                             </span>
                             <br />
@@ -203,7 +203,7 @@ export function HeroGeometric({
                         <Link href="#contact" className="block">
                             <StarButton>Book Platform Demo</StarButton>
                         </Link>
-                        <Link href="/pricing" className="px-6 py-3 rounded-full border border-white/20 text-white hover:bg-white/10 transition-colors font-medium text-center">
+                        <Link href="/pricing" className="px-6 py-3 rounded-full border border-foreground/20 text-foreground hover:bg-foreground/10 transition-colors font-medium text-center">
                             View Pricing
                         </Link>
                     </motion.div>
@@ -213,22 +213,22 @@ export function HeroGeometric({
                         variants={fadeUpVariants}
                         initial="hidden"
                         animate="visible"
-                        className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 text-left border-t border-white/[0.05] pt-12 max-w-5xl mx-auto"
+                        className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 text-left border-t border-foreground/[0.05] pt-12 max-w-5xl mx-auto"
                     >
-                        <GlassCard className="p-6 relative group overflow-hidden border border-white/5 hover:border-accent/40 hover:bg-white/[0.04] transition-all cursor-default text-center">
+                        <GlassCard className="p-6 relative group overflow-hidden border border-foreground/5 hover:border-accent/40 hover:bg-foreground/[0.04] transition-all cursor-default text-center">
                             <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                            <h3 className="text-[11px] sm:text-xs font-bold text-white tracking-widest uppercase mb-2 relative z-10 flex items-center justify-center gap-2"><span className="text-accent text-lg leading-none">✴</span>Boost Lead Quality</h3>
-                            <p className="text-white/40 text-xs leading-relaxed relative z-10">Higher conversion with smart AI automation.</p>
+                            <h3 className="text-[11px] sm:text-xs font-bold text-foreground tracking-widest uppercase mb-2 relative z-10 flex items-center justify-center gap-2"><span className="text-accent text-lg leading-none">✴</span>Boost Lead Quality</h3>
+                            <p className="text-muted text-xs leading-relaxed relative z-10">Higher conversion with smart AI automation.</p>
                         </GlassCard>
-                        <GlassCard className="p-6 relative group overflow-hidden border border-white/5 hover:border-accent/40 hover:bg-white/[0.04] transition-all cursor-default text-center">
+                        <GlassCard className="p-6 relative group overflow-hidden border border-foreground/5 hover:border-accent/40 hover:bg-foreground/[0.04] transition-all cursor-default text-center">
                             <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                            <h3 className="text-[11px] sm:text-xs font-bold text-white tracking-widest uppercase mb-2 relative z-10 flex items-center justify-center gap-2"><span className="text-accent text-lg leading-none">✴</span>Cut Costs by 50–70%</h3>
-                            <p className="text-white/40 text-xs leading-relaxed relative z-10">Replace agencies and expensive subscriptions.</p>
+                            <h3 className="text-[11px] sm:text-xs font-bold text-foreground tracking-widest uppercase mb-2 relative z-10 flex items-center justify-center gap-2"><span className="text-accent text-lg leading-none">✴</span>Cut Costs by 50–70%</h3>
+                            <p className="text-muted text-xs leading-relaxed relative z-10">Replace agencies and expensive subscriptions.</p>
                         </GlassCard>
-                        <GlassCard className="p-6 relative group overflow-hidden border border-white/5 hover:border-accent/40 hover:bg-white/[0.04] transition-all cursor-default text-center">
+                        <GlassCard className="p-6 relative group overflow-hidden border border-foreground/5 hover:border-accent/40 hover:bg-foreground/[0.04] transition-all cursor-default text-center">
                             <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                            <h3 className="text-[11px] sm:text-xs font-bold text-white tracking-widest uppercase mb-2 relative z-10 flex items-center justify-center gap-2"><span className="text-accent text-lg leading-none">✴</span>AI In-House Execution</h3>
-                            <p className="text-white/40 text-xs leading-relaxed relative z-10">No agencies needed. No hidden platform fees.</p>
+                            <h3 className="text-[11px] sm:text-xs font-bold text-foreground tracking-widest uppercase mb-2 relative z-10 flex items-center justify-center gap-2"><span className="text-accent text-lg leading-none">✴</span>AI In-House Execution</h3>
+                            <p className="text-muted text-xs leading-relaxed relative z-10">No agencies needed. No hidden platform fees.</p>
                         </GlassCard>
                     </motion.div>
                 </div>

@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 
 export const FinalCTA = () => {
   return (
-    <section className="py-32 px-6 relative overflow-hidden bg-[#0D0D0E] border-t border-card-border">
+    <section className="py-32 px-6 relative overflow-hidden section-dark border-t border-card-border">
       <DotPattern width={24} height={24} className="opacity-40" />
       
       <div className="max-w-4xl mx-auto relative z-10 text-center">
@@ -16,9 +16,9 @@ export const FinalCTA = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-8 backdrop-blur-md">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-foreground/5 border border-foreground/10 mb-8 backdrop-blur-md">
             <span className="text-xl text-accent">✴</span>
-            <span className="text-sm font-medium tracking-widest uppercase text-white/70">Get Started</span>
+            <span className="text-sm font-medium tracking-widest uppercase text-muted">Get Started</span>
           </div>
           
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-normal text-foreground mb-6 tracking-tight leading-none">
@@ -32,7 +32,7 @@ export const FinalCTA = () => {
             <StarButton>
               Book Your Demo <ArrowRight size={16} />
             </StarButton>
-            <button className="px-6 py-3 rounded-full border border-white/10 text-white/50 hover:bg-white/5 hover:text-white transition-all text-xs font-bold uppercase tracking-[0.15em]">
+            <button className="px-6 py-3 rounded-full border border-foreground/10 text-muted hover:bg-foreground/5 hover:text-foreground transition-all text-xs font-bold uppercase tracking-[0.15em]">
               View Plans
             </button>
           </div>
@@ -43,7 +43,7 @@ export const FinalCTA = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="mt-20 flex flex-wrap items-center justify-center gap-8 text-xs font-semibold text-white/20 tracking-[0.15em] uppercase"
+          className="mt-20 flex flex-wrap items-center justify-center gap-8 text-xs font-semibold text-foreground/20 tracking-[0.15em] uppercase"
         >
           <span className="hover:text-accent transition-colors cursor-pointer">AI Tools Ecosystem</span>
           <span className="hover:text-accent transition-colors cursor-pointer">Platform Comparison</span>

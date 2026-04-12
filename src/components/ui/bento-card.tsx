@@ -13,7 +13,7 @@ const cardVariants = cva(
       variant: {
         default: 'p-6',
         featured: 'flex-col md:flex-row',
-        gold: 'bg-[#E5D08C] text-black border-none', // Special accent block
+        gold: 'bg-accent text-background border-none', // Special accent block
       },
     },
     defaultVariants: {
@@ -68,18 +68,18 @@ const BentoCard = React.forwardRef<HTMLDivElement, BlogPostCardProps>(
             <div className="mb-4 flex items-center justify-between">
               <div className={cn(
                 "flex items-center gap-4 text-xs font-semibold uppercase tracking-wider",
-                isGold ? "text-black/60" : "text-muted"
+                isGold ? "text-background/60" : "text-muted"
               )}>
                 <span className={cn(
                   "rounded-full px-3 py-1",
-                  isGold ? "bg-black/10 text-black border border-black/20" : "bg-accent/10 border border-accent/20 text-accent"
+                  isGold ? "bg-background/10 text-background border border-background/20" : "bg-accent/10 border border-accent/20 text-accent"
                 )}>
                   {tag}
                 </span>
                 {date && <span>{date}</span>}
               </div>
               {icon && (
-                <div className={cn("text-2xl", isGold ? "text-black" : "text-white")}>
+                <div className={cn("text-2xl", isGold ? "text-background" : "text-foreground")}>
                   {icon}
                 </div>
               )}
@@ -87,14 +87,14 @@ const BentoCard = React.forwardRef<HTMLDivElement, BlogPostCardProps>(
 
             <h3 className={cn(
               "mb-3 text-2xl font-medium leading-tight lg:text-3xl tracking-tight",
-              isGold ? "text-black" : "text-foreground"
+              isGold ? "text-background" : "text-foreground"
             )}>
               {title}
             </h3>
             
             <p className={cn(
               "leading-relaxed",
-              isGold ? "text-black/70" : "text-muted"
+              isGold ? "text-background/70" : "text-muted"
             )}>
               {description}
             </p>
@@ -103,7 +103,7 @@ const BentoCard = React.forwardRef<HTMLDivElement, BlogPostCardProps>(
           <div className="mt-8 flex justify-end">
             <div className={cn(
               "w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300",
-              isGold ? "bg-black text-[#E5D08C] group-hover:scale-110" : "bg-card border border-white/10 group-hover:bg-[#E5D08C] group-hover:text-black group-hover:border-transparent"
+              isGold ? "bg-background text-accent group-hover:scale-110" : "bg-card border border-foreground/10 group-hover:bg-accent group-hover:text-background group-hover:border-transparent"
             )}>
               <ArrowRight className="h-4 w-4" />
             </div>
@@ -123,7 +123,7 @@ const BentoCard = React.forwardRef<HTMLDivElement, BlogPostCardProps>(
         <a href={href} className="absolute inset-0 z-10" aria-label={`Read more about ${title}`}>
           <span className="sr-only">Read More</span>
         </a>
-        <div className="relative z-0 flex h-full w-full flex-col md:flex-row bg-[radial-gradient(ellipse_at_top_right,var(--tw-gradient-stops))] from-white/[0.03] to-transparent pointer-events-none">
+        <div className="relative z-0 flex h-full w-full flex-col md:flex-row bg-[radial-gradient(ellipse_at_top_right,var(--tw-gradient-stops))] from-foreground/[0.03] to-transparent pointer-events-none">
           <div className="absolute inset-0 pointer-events-auto" />
           {content}
         </div>

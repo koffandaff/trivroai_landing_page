@@ -29,7 +29,7 @@ export default function WhatsNewPage() {
             <h1 className="text-4xl md:text-6xl font-normal text-foreground mb-6 tracking-tight leading-none">
               What&apos;s New at <span className="text-accent italic">Trivro AI</span>
             </h1>
-            <p className="text-white/45 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+            <p className="text-muted text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
               Tracking the continuous evolution of enterprise marketing. Exclusive updates, new AI tools, and platform enhancements.
             </p>
           </motion.div>
@@ -44,8 +44,8 @@ export default function WhatsNewPage() {
               key={idx}
               className={`px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-colors ${
                 idx === 0
-                  ? "bg-white/10 text-white border border-white/20"
-                  : "bg-transparent border border-white/5 text-white/40 hover:text-white hover:bg-white/5"
+                  ? "bg-foreground/10 text-foreground border border-foreground/20"
+                  : "bg-transparent border border-foreground/5 text-muted hover:text-foreground hover:bg-foreground/5"
               }`}
             >
               {tab}
@@ -70,7 +70,7 @@ export default function WhatsNewPage() {
                   <span className="text-xs uppercase tracking-widest text-accent font-bold">
                     {update.status}
                   </span>
-                  <div className="flex items-center gap-1.5 text-white/40 text-sm">
+                  <div className="flex items-center gap-1.5 text-muted text-sm">
                     <CalendarDays size={14} />
                     <span>{update.date}</span>
                   </div>
@@ -78,13 +78,13 @@ export default function WhatsNewPage() {
 
                 {/* Content */}
                 <div className="flex-1">
-                  <span className="text-xs font-medium uppercase tracking-[0.1em] text-white/30 mb-2 block">
+                  <span className="text-xs font-medium uppercase tracking-[0.1em] text-muted mb-2 block">
                     {update.headline}
                   </span>
-                  <h3 className="text-2xl font-bold text-white mb-4 tracking-tight">
+                  <h3 className="text-2xl font-bold text-foreground mb-4 tracking-tight">
                     {update.title}
                   </h3>
-                  <p className="text-white/50 leading-relaxed mb-6">
+                  <p className="text-muted leading-relaxed mb-6">
                     {update.desc}
                   </p>
                   <a href={update.link} className="inline-flex items-center gap-2 text-sm text-accent font-bold uppercase tracking-[0.15em] hover:opacity-80 transition-opacity">

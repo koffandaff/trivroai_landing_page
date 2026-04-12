@@ -30,10 +30,10 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 tracking-tight leading-tight">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8 tracking-tight leading-tight">
               Akanksha Raj Trivedi
             </h2>
-            <div className="space-y-5 text-white/45 text-base leading-relaxed">
+            <div className="space-y-5 text-muted text-base leading-relaxed">
               <p>
                 Akanksha Raj Trivedi is an AI tools consultant and marketing systems architect focused on helping businesses build scalable, in-house AI marketing ecosystems.
               </p>
@@ -51,7 +51,7 @@ export default function AboutPage() {
             className="relative"
           >
             <span className="badge mb-6 inline-flex">MEET THE FOUNDER</span>
-            <div className="mt-4 aspect-[3/4] rounded-3xl overflow-hidden relative border border-white/[0.08]">
+            <div className="mt-4 aspect-[3/4] rounded-3xl overflow-hidden relative border border-foreground/[0.08]">
               <Image 
                 src="/creator.png"
                 alt="Akanksha Raj Trivedi"
@@ -60,7 +60,7 @@ export default function AboutPage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
               <div className="absolute bottom-6 left-6 right-6">
-                <p className="text-white font-bold text-lg leading-none mb-1">Akanksha Raj Trivedi</p>
+                <p className="text-foreground font-bold text-lg leading-none mb-1">Akanksha Raj Trivedi</p>
                 <p className="text-accent/80 text-xs font-semibold uppercase tracking-widest">Founder & CEO</p>
               </div>
             </div>
@@ -76,10 +76,10 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 tracking-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 tracking-tight">
               Our Mission
             </h2>
-            <p className="text-white/45 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-10">
+            <p className="text-muted text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-10">
               To democratize enterprise-grade marketing technology — giving every founder, small team, and growing business access to the same AI-powered systems used by industry leaders, without the cost or complexity.
             </p>
             <PremiumButton size="lg" href="#">

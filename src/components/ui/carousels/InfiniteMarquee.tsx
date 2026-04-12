@@ -43,7 +43,7 @@ export const InfiniteMarquee = ({
         {duplicatedItems.map((item, idx) => (
           <div
             key={idx}
-            className="flex items-center justify-center shrink-0 px-8 py-4 glass-card border-white/5 whitespace-nowrap bg-[#111A14]/80 backdrop-blur-md text-white/70 hover:text-white transition-colors duration-300"
+            className="flex items-center justify-center shrink-0 px-8 py-4 glass-card border-foreground/5 whitespace-nowrap bg-card backdrop-blur-md text-muted hover:text-foreground transition-colors duration-300"
           >
             <span className="text-sm font-medium tracking-wider uppercase">{item}</span>
           </div>

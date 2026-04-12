@@ -2,9 +2,10 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Sun, Moon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { useTheme } from "@/components/ThemeProvider";
 
 const navItems = [
   { name: "Solutions", href: "/#solutions" },
@@ -39,6 +40,7 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [openMobileDropdown, setOpenMobileDropdown] = useState<string | null>(null);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -76,7 +78,7 @@ export const Navbar = () => {
                       <Link
                         key={child.name}
                         href={child.href}
-                        className="px-4 py-3 text-sm font-medium text-foreground/80 hover:text-accent hover:bg-white/[0.03] rounded-2xl transition-colors whitespace-nowrap block"
+                        className="px-4 py-3 text-sm font-medium text-muted hover:text-accent hover:bg-foreground/[0.03] rounded-2xl transition-colors whitespace-nowrap block"
                       >
                         {child.name}
                       </Link>
@@ -117,7 +119,7 @@ export const Navbar = () => {
                       <Link
                         key={child.name}
                         href={child.href}
-                        className="px-4 py-3 text-sm font-medium text-foreground/80 hover:text-accent hover:bg-white/[0.03] rounded-2xl transition-colors whitespace-nowrap block"
+                        className="px-4 py-3 text-sm font-medium text-muted hover:text-accent hover:bg-foreground/[0.03] rounded-2xl transition-colors whitespace-nowrap block"
                       >
                         {child.name}
                       </Link>
@@ -127,12 +129,25 @@ export const Navbar = () => {
               )}
             </div>
           ))}
+
+          {/* Theme Toggle */}
+          <button
+            onClick={toggleTheme}
+            className="ml-2 p-2 rounded-full border border-card-border hover:bg-foreground/5 transition-all group"
+            aria-label="Toggle theme"
+          >
+            {theme === "dark" ? (
+              <Sun size={16} className="text-accent group-hover:rotate-45 transition-transform duration-500" />
+            ) : (
+              <Moon size={16} className="text-accent group-hover:-rotate-12 transition-transform duration-500" />
+            )}
+          </button>
         </div>
 
         {/* Mobile Toggle */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden p-2 text-white hover:bg-white/10 rounded-lg transition-colors"
+          className="lg:hidden p-2 text-foreground hover:bg-foreground/10 rounded-lg transition-colors"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -150,12 +165,12 @@ export const Navbar = () => {
           >
             <div className="flex flex-col gap-2">
               {navItems.map((item) => (
-                <div key={item.name} className="flex flex-col border-b border-white/[0.04]">
+                <div key={item.name} className="flex flex-col border-b border-foreground/[0.04]">
                   {!item.children ? (
                     <Link
                       href={item.href}
                       onClick={() => setIsOpen(false)}
-                      className="text-xl font-medium tracking-tight text-white py-4 flex items-center justify-between"
+                      className="text-xl font-medium tracking-tight text-foreground py-4 flex items-center justify-between"
                     >
                       {item.name}
                     </Link>
@@ -163,7 +178,7 @@ export const Navbar = () => {
                     <>
                       <button
                         onClick={() => setOpenMobileDropdown(openMobileDropdown === item.name ? null : item.name)}
-                        className="text-xl font-medium tracking-tight text-white py-4 flex items-center justify-between text-left"
+                        className="text-xl font-medium tracking-tight text-foreground py-4 flex items-center justify-between text-left"
                       >
                         {item.name}
                         <ChevronDown 
@@ -184,7 +199,7 @@ export const Navbar = () => {
                                 key={child.name}
                                 href={child.href}
                                 onClick={() => setIsOpen(false)}
-                                className="pl-4 py-2 text-base text-foreground/70 hover:text-accent font-medium border-l border-white/10 ml-2"
+                                className="pl-4 py-2 text-base text-muted hover:text-accent font-medium border-l border-foreground/10 ml-2"
                               >
                                 {child.name}
                               </Link>
@@ -198,9 +213,16 @@ export const Navbar = () => {
               ))}
             </div>
             <div className="mt-12 flex flex-col gap-4">
-              <Link href="#" className="text-center py-4 font-bold uppercase tracking-[0.2em] rounded-full bg-accent text-black hover:bg-white transition-all text-xs">
+              <Link href="#" className="text-center py-4 font-bold uppercase tracking-[0.2em] rounded-full bg-accent text-background hover:bg-foreground hover:text-background transition-all text-xs">
                 Book a Demo
               </Link>
+              <button
+                onClick={toggleTheme}
+                className="text-center py-4 font-medium uppercase tracking-[0.15em] rounded-full border border-card-border text-foreground hover:bg-foreground/5 transition-all text-xs flex items-center justify-center gap-2"
+              >
+                {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
+                {theme === "dark" ? "Light Mode" : "Dark Mode"}
+              </button>
             </div>
           </motion.div>
         )}

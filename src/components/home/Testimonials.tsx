@@ -31,7 +31,7 @@ export const Testimonials = () => {
           className="text-center mb-16"
         >
           <span className="badge mb-6 inline-flex">✦ REAL GROWTH</span>
-          <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground tracking-tight">
             Trusted by Forward-Thinking <br />
             <span className="text-gradient-accent">Businesses</span>
           </h2>
@@ -41,10 +41,10 @@ export const Testimonials = () => {
           {testimonials.map((t, idx) => (
             <GlassCard key={idx} className="p-8 md:p-10">
               <div className="text-accent/20 text-6xl font-serif leading-none mb-4">&quot;</div>
-              <p className="text-white/60 text-base leading-relaxed mb-8">&ldquo;{t.quote}&rdquo;</p>
+              <p className="text-muted text-base leading-relaxed mb-8">&ldquo;{t.quote}&rdquo;</p>
               <div>
-                <p className="font-bold text-white">{t.name}</p>
-                <p className="text-xs text-white/35 tracking-[0.1em] uppercase mt-1">{t.role}</p>
+                <p className="font-bold text-foreground">{t.name}</p>
+                <p className="text-xs text-muted tracking-[0.1em] uppercase mt-1">{t.role}</p>
               </div>
             </GlassCard>
           ))}

@@ -52,8 +52,8 @@ export function StarButton({
   children,
   lightWidth = 110,
   duration = 3,
-  lightColor = "#E5D08C", // Updated default to Sand Gold
-  backgroundColor = "#1C1C1E", // Updated to match card bg
+  lightColor = "var(--accent)", // Use CSS variable
+  backgroundColor = "var(--card-bg)", // Use CSS variable
   borderWidth = 1,
   className,
   ...props
@@ -99,13 +99,13 @@ export function StarButton({
         }
       />
       <div
-        className="absolute inset-0 border border-white/5 z-[4] overflow-hidden rounded-[inherit] text-white"
+        className="absolute inset-0 border border-foreground/5 z-[4] overflow-hidden rounded-[inherit] text-foreground"
         style={{ borderWidth: "var(--border-width)" }}
         aria-hidden="true"
       >
         <StarBackground color={backgroundColor} />
       </div>
-      <span className="z-10 relative bg-gradient-to-t from-white/90 to-white inline-block text-transparent bg-clip-text font-medium tracking-wide">
+      <span className="z-10 relative bg-gradient-to-t from-foreground/90 to-foreground inline-block text-transparent bg-clip-text font-medium tracking-wide">
         {children}
       </span>
     </button>

@@ -123,7 +123,7 @@ const snapItems = [
 
 export default function TestCarouselsPage() {
   return (
-    <div className="min-h-screen bg-[#0C120E] text-white pt-24 pb-32">
+    <div className="min-h-screen bg-[#0C120E] text-foreground pt-24 pb-32">
       <div className="max-w-7xl mx-auto px-6 mb-16">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
           Layout Carousel <span className="text-gradient-green">Explorations</span>

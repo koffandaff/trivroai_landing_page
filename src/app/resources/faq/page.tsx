@@ -62,7 +62,7 @@ export default function FAQPage() {
             <h1 className="text-4xl md:text-6xl font-normal text-foreground mb-6 tracking-tight leading-none">
               Frequently Asked <span className="text-accent italic">Questions</span>
             </h1>
-            <p className="text-white/45 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+            <p className="text-muted text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
               Everything you need to know about Trivro AI. Can&apos;t find the answer you&apos;re looking for? Reach out to our team.
             </p>
           </motion.div>
@@ -79,13 +79,13 @@ export default function FAQPage() {
                 {cat.items.map((faq, idx) => {
                   const isOpen = openFaq === faq.q;
                   return (
-                    <GlassCard key={idx} className="overflow-hidden border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] transition-colors">
+                    <GlassCard key={idx} className="overflow-hidden border border-foreground/5 bg-foreground/[0.02] hover:bg-foreground/[0.04] transition-colors">
                       <button
                         onClick={() => setOpenFaq(isOpen ? null : faq.q)}
                         className="w-full flex items-center justify-between p-6 text-left"
                       >
-                        <span className="font-medium text-white">{faq.q}</span>
-                        <ChevronDown size={18} className={`text-white/40 transition-transform ${isOpen ? "rotate-180" : ""}`} />
+                        <span className="font-medium text-foreground">{faq.q}</span>
+                        <ChevronDown size={18} className={`text-muted transition-transform ${isOpen ? "rotate-180" : ""}`} />
                       </button>
                       <AnimatePresence>
                         {isOpen && (
@@ -94,7 +94,7 @@ export default function FAQPage() {
                             animate={{ height: "auto", opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}
                           >
-                            <div className="px-6 pb-6 pt-2 text-white/50 text-sm leading-relaxed border-t border-white/[0.05] mt-2">
+                            <div className="px-6 pb-6 pt-2 text-muted text-sm leading-relaxed border-t border-foreground/[0.05] mt-2">
                               {faq.a}
                             </div>
                           </motion.div>
@@ -112,16 +112,16 @@ export default function FAQPage() {
       {/* CTA */}
       <section className="px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="rounded-3xl bg-gradient-to-br from-[#161618] to-[#111112] border border-accent/10 p-10 md:p-14 shadow-[0_0_60px_rgba(229,208,140,0.06)] relative overflow-hidden">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Still have questions?</h3>
-            <p className="text-white/45 leading-relaxed max-w-2xl mx-auto mb-10">
+          <div className="rounded-3xl bg-gradient-to-br from-card to-background border border-accent/10 p-10 md:p-14 shadow-lg relative overflow-hidden">
+            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Still have questions?</h3>
+            <p className="text-muted leading-relaxed max-w-2xl mx-auto mb-10">
               Our experts are ready to help you build your in-house AI marketing system today.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <PremiumButton size="md" href="#">
                 Book a Strategy Session <ArrowRight size={16} />
               </PremiumButton>
-              <Link href="/pricing" className="text-xs font-bold text-white/60 uppercase tracking-[0.15em] hover:text-accent transition-colors px-6 py-3 border border-white/10 rounded-full hover:bg-white/5">
+              <Link href="/pricing" className="text-xs font-bold text-muted uppercase tracking-[0.15em] hover:text-accent transition-colors px-6 py-3 border border-foreground/10 rounded-full hover:bg-foreground/5">
                 View Pricing Plans
               </Link>
             </div>

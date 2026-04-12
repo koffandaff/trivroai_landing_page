@@ -46,7 +46,7 @@ export default function SecurityPage() {
             <h1 className="text-4xl md:text-6xl font-normal text-foreground mb-6 tracking-tight leading-none">
               Security & <span className="text-accent italic">Compliance</span>
             </h1>
-            <p className="text-white/45 text-base md:text-lg max-w-2xl leading-relaxed">
+            <p className="text-muted text-base md:text-lg max-w-2xl leading-relaxed">
               Security and data responsibility are foundational to how Trivro AI is built. We prioritize the protection of your enterprise data through every layer of our platform.
             </p>
           </motion.div>
@@ -61,10 +61,10 @@ export default function SecurityPage() {
                 <div className="w-12 h-12 rounded-xl bg-accent/10 border border-accent/15 flex items-center justify-center mb-6 text-accent">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-bold text-white mb-5">{feature.title}</h3>
+                <h3 className="text-xl font-bold text-foreground mb-5">{feature.title}</h3>
                 <ul className="flex flex-col gap-3">
                   {feature.items.map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-sm text-white/45">
+                    <li key={i} className="flex items-start gap-3 text-sm text-muted">
                       <div className="w-1.5 h-1.5 rounded-full bg-accent/60 mt-1.5 shrink-0" />
                       {item}
                     </li>

@@ -49,15 +49,15 @@ export const SnapScrollCarousel = ({ items, className }: SnapScrollCarouselProps
             key={item.id}
             className="snap-center shrink-0 w-[85vw] md:w-[400px] group"
           >
-            <div className="h-[300px] glass-card border-white/5 group-hover:border-accent/40 transition-colors duration-500 p-8 flex flex-col justify-between relative overflow-hidden bg-card">
+            <div className="h-[300px] glass-card border-foreground/5 group-hover:border-accent/40 transition-colors duration-500 p-8 flex flex-col justify-between relative overflow-hidden bg-card">
               {/* Subtle hover effect background */}
               <div className="absolute inset-0 bg-glow-accent opacity-0 group-hover:opacity-20 transition-opacity duration-700 pointer-events-none" />
               
               <div>
-                <div className="text-4xl font-light text-white/20 mb-6 font-mono">
+                <div className="text-4xl font-light text-foreground/20 mb-6 font-mono">
                   {String(idx + 1).padStart(2, "0")}
                 </div>
-                <h3 className="text-2xl font-semibold text-white mb-3">
+                <h3 className="text-2xl font-semibold text-foreground mb-3">
                   {item.title}
                 </h3>
                 <p className="text-foreground-muted text-sm leading-relaxed">
@@ -66,9 +66,9 @@ export const SnapScrollCarousel = ({ items, className }: SnapScrollCarouselProps
               </div>
 
               {item.metric && (
-                <div className="border-t border-white/5 pt-4 mt-4 flex items-baseline gap-2">
+                <div className="border-t border-foreground/5 pt-4 mt-4 flex items-baseline gap-2">
                   <span className="text-2xl font-bold text-accent">{item.metric}</span>
-                  <span className="text-xs text-white/40 uppercase tracking-wider">{item.metricLabel}</span>
+                  <span className="text-xs text-muted uppercase tracking-wider">{item.metricLabel}</span>
                 </div>
               )}
             </div>
@@ -80,9 +80,9 @@ export const SnapScrollCarousel = ({ items, className }: SnapScrollCarouselProps
 
       {/* Custom Progress Bar */}
       <div className="max-w-md mx-auto mt-4 px-12 md:px-0">
-        <div className="h-1 w-full bg-white/5 rounded-full overflow-hidden">
+        <div className="h-1 w-full bg-foreground/5 rounded-full overflow-hidden">
           <motion.div 
-            className="h-full bg-gradient-to-r from-accent to-white/40 rounded-full"
+            className="h-full bg-gradient-to-r from-accent to-foreground/40 rounded-full"
             style={{ width: `${Math.max(5, scrollProgress * 100)}%` }}
             initial={false}
           />

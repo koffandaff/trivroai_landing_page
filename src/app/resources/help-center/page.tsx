@@ -55,7 +55,7 @@ export default function HelpCenterPage() {
             <h1 className="text-4xl md:text-6xl font-normal text-foreground mb-6 tracking-tight leading-none">
               Help <span className="text-accent italic">Center</span>
             </h1>
-            <p className="text-white/45 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+            <p className="text-muted text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
               Find answers to common questions and guidance for using Trivro AI smoothly.
             </p>
           </motion.div>
@@ -68,7 +68,7 @@ export default function HelpCenterPage() {
           {/* Sidebar */}
           <div className="w-full md:w-64 shrink-0">
             <div className="sticky top-32 flex flex-col gap-2">
-              <h3 className="text-xs font-bold uppercase tracking-[0.15em] text-white/30 mb-4 px-4">Categories</h3>
+              <h3 className="text-xs font-bold uppercase tracking-[0.15em] text-muted mb-4 px-4">Categories</h3>
               {helpSections.map((section) => (
                 <button
                   key={section.title}
@@ -76,7 +76,7 @@ export default function HelpCenterPage() {
                   className={`text-left px-4 py-2.5 rounded-xl transition-all text-sm font-medium ${
                     openSection === section.title
                       ? "bg-accent/10 border border-accent/20 text-accent"
-                      : "text-white/50 hover:text-white hover:bg-white/5 border border-transparent"
+                      : "text-muted hover:text-foreground hover:bg-foreground/5 border border-transparent"
                   }`}
                 >
                   {section.title}
@@ -89,18 +89,18 @@ export default function HelpCenterPage() {
           <div className="flex-1">
             {helpSections.map((section) => (
               <div key={section.title} className={openSection === section.title ? "block" : "hidden"}>
-                <h2 className="text-2xl font-bold text-white mb-8 border-b border-white/[0.05] pb-4">{section.title}</h2>
+                <h2 className="text-2xl font-bold text-foreground mb-8 border-b border-foreground/[0.05] pb-4">{section.title}</h2>
                 <div className="flex flex-col gap-3">
                   {section.faqs.map((faq, idx) => {
                     const isOpen = openFaq === faq.q;
                     return (
-                      <GlassCard key={idx} className="overflow-hidden border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] transition-colors">
+                      <GlassCard key={idx} className="overflow-hidden border border-foreground/5 bg-foreground/[0.02] hover:bg-foreground/[0.04] transition-colors">
                         <button
                           onClick={() => setOpenFaq(isOpen ? null : faq.q)}
                           className="w-full flex items-center justify-between p-6 text-left"
                         >
-                          <span className="font-medium text-white">{faq.q}</span>
-                          <ChevronDown size={18} className={`text-white/40 transition-transform ${isOpen ? "rotate-180" : ""}`} />
+                          <span className="font-medium text-foreground">{faq.q}</span>
+                          <ChevronDown size={18} className={`text-muted transition-transform ${isOpen ? "rotate-180" : ""}`} />
                         </button>
                         <AnimatePresence>
                           {isOpen && (
@@ -109,7 +109,7 @@ export default function HelpCenterPage() {
                               animate={{ height: "auto", opacity: 1 }}
                               exit={{ height: 0, opacity: 0 }}
                             >
-                              <div className="px-6 pb-6 pt-2 text-white/50 text-sm leading-relaxed border-t border-white/[0.05] mt-2">
+                              <div className="px-6 pb-6 pt-2 text-muted text-sm leading-relaxed border-t border-foreground/[0.05] mt-2">
                                 {faq.a}
                               </div>
                             </motion.div>
@@ -128,37 +128,37 @@ export default function HelpCenterPage() {
       {/* Content Support Section */}
       <section className="px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="rounded-3xl bg-gradient-to-br from-[#161618] to-[#111112] border border-accent/10 p-10 md:p-14 shadow-[0_0_60px_rgba(229,208,140,0.06)] relative overflow-hidden">
-            <h3 className="text-2xl font-bold text-white mb-2 relative z-10">Need more help?</h3>
-            <p className="text-white/40 mb-10 text-sm max-w-lg mx-auto relative z-10">
+          <div className="rounded-3xl bg-gradient-to-br from-card to-background border border-accent/10 p-10 md:p-14 shadow-lg relative overflow-hidden">
+            <h3 className="text-2xl font-bold text-foreground mb-2 relative z-10">Need more help?</h3>
+            <p className="text-muted mb-10 text-sm max-w-lg mx-auto relative z-10">
               Our support team is here to assist you with your Trivro AI account or platform usage. We typically respond within 24 business hours.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10 text-left">
-              <a href="mailto:support@trivro.in" className="flex flex-col items-center justify-center text-center gap-3 p-6 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-accent/40 transition-colors">
+              <a href="mailto:support@trivro.in" className="flex flex-col items-center justify-center text-center gap-3 p-6 rounded-2xl bg-foreground/[0.03] border border-foreground/5 hover:border-accent/40 transition-colors">
                 <Mail size={24} className="text-accent" />
                 <div>
-                  <div className="text-white font-medium mb-1">Email Support</div>
-                  <div className="text-white/40 text-xs">support@trivro.in</div>
+                  <div className="text-foreground font-medium mb-1">Email Support</div>
+                  <div className="text-muted text-xs">support@trivro.in</div>
                 </div>
               </a>
-              <div className="flex flex-col items-center justify-center text-center gap-3 p-6 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-accent/40 transition-colors">
+              <div className="flex flex-col items-center justify-center text-center gap-3 p-6 rounded-2xl bg-foreground/[0.03] border border-foreground/5 hover:border-accent/40 transition-colors">
                 <Phone size={24} className="text-accent" />
                 <div>
-                  <div className="text-white font-medium mb-1">Phone</div>
-                  <div className="text-white/40 text-xs">+91 92747 41994</div>
+                  <div className="text-foreground font-medium mb-1">Phone</div>
+                  <div className="text-muted text-xs">+91 92747 41994</div>
                 </div>
               </div>
-              <div className="flex flex-col items-center justify-center text-center gap-3 p-6 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-accent/40 transition-colors">
+              <div className="flex flex-col items-center justify-center text-center gap-3 p-6 rounded-2xl bg-foreground/[0.03] border border-foreground/5 hover:border-accent/40 transition-colors">
                 <MapPin size={24} className="text-accent" />
                 <div>
-                  <div className="text-white font-medium mb-1">Office</div>
-                  <div className="text-white/40 text-xs text-balance">Satya Square, C-303, Tragad Rd, Ahmedabad</div>
+                  <div className="text-foreground font-medium mb-1">Office</div>
+                  <div className="text-muted text-xs text-balance">Satya Square, C-303, Tragad Rd, Ahmedabad</div>
                 </div>
               </div>
             </div>
             
-            <p className="text-white/20 text-[10px] mt-10 uppercase tracking-widest relative z-10 max-w-sm mx-auto">
+            <p className="text-foreground/20 text-[10px] mt-10 uppercase tracking-widest relative z-10 max-w-sm mx-auto">
               Not intended for sales, partnerships, or marketing inquiries.
             </p>
           </div>

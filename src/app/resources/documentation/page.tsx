@@ -44,7 +44,7 @@ export default function DocumentationPage() {
             <h1 className="text-4xl md:text-6xl font-normal text-foreground mb-6 tracking-tight leading-none">
               <span className="text-accent italic">Documentation</span>
             </h1>
-            <p className="text-white/45 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+            <p className="text-muted text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
               Everything you need to understand, configure, and use Trivro AI effectively. This documentation covers platform basics, core features, and best practices.
             </p>
           </motion.div>
@@ -66,15 +66,15 @@ export default function DocumentationPage() {
                 <div className="w-12 h-12 rounded-xl bg-accent/10 border border-accent/15 flex items-center justify-center mb-6 text-accent group-hover:bg-accent group-hover:text-black transition-colors">
                   {section.icon}
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{section.title}</h3>
-                <p className="text-sm text-white/45 leading-relaxed mb-6 flex-1">
+                <h3 className="text-xl font-bold text-foreground mb-3">{section.title}</h3>
+                <p className="text-sm text-muted leading-relaxed mb-6 flex-1">
                   {section.desc}
                 </p>
                 
                 {section.links.length > 0 ? (
-                  <ul className="flex flex-col gap-3 mt-auto pt-4 border-t border-white/[0.05]">
+                  <ul className="flex flex-col gap-3 mt-auto pt-4 border-t border-foreground/[0.05]">
                     {section.links.map((link, lidx) => (
-                      <li key={lidx} className="flex items-center gap-2 text-sm text-white/70 hover:text-accent transition-colors">
+                      <li key={lidx} className="flex items-center gap-2 text-sm text-muted hover:text-accent transition-colors">
                         <ArrowRight size={14} className="text-accent/50" />
                         {link}
                       </li>

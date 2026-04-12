@@ -34,13 +34,13 @@ export const Footer = () => {
             </p>
             {/* Social Icons */}
             <div className="flex items-center gap-3">
-              <a href="#" className="w-10 h-10 rounded-full border border-white/5 flex items-center justify-center text-muted hover:text-white hover:bg-white/5 transition-all">
+              <a href="#" className="w-10 h-10 rounded-full border border-foreground/5 flex items-center justify-center text-muted hover:text-foreground hover:bg-foreground/5 transition-all">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
               </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-white/5 flex items-center justify-center text-muted hover:text-white hover:bg-white/5 transition-all">
+              <a href="#" className="w-10 h-10 rounded-full border border-foreground/5 flex items-center justify-center text-muted hover:text-foreground hover:bg-foreground/5 transition-all">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
               </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-white/5 flex items-center justify-center text-muted hover:text-white hover:bg-white/5 transition-all">
+              <a href="#" className="w-10 h-10 rounded-full border border-foreground/5 flex items-center justify-center text-muted hover:text-foreground hover:bg-foreground/5 transition-all">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2.5 7.1c.3-1.6 1.4-2.8 3-3.1C8.7 3.5 12 3.5 12 3.5s3.3 0 6.5.5c1.6.3 2.7 1.5 3 3.1.5 1.5.5 4.9.5 4.9s0 3.4-.5 4.9c-.3 1.6-1.4 2.8-3 3.1-3.2.5-6.5.5-6.5.5s-3.3 0-6.5-.5c-1.6-.3-2.7-1.5-3-3.1-.5-1.5-.5-4.9-.5-4.9s0-3.4.5-4.9z"/><path d="m9.7 15.5 6-3.5-6-3.5z"/></svg>
               </a>
             </div>
@@ -89,15 +89,15 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-[0.15em] text-muted relative z-20">
           <p>© 2026 TRIVRO.AI. ALL RIGHTS RESERVED.</p>
           <div className="flex gap-6">
-            <Link href="#" className="hover:text-white transition-colors">TERMS & CONDITION</Link>
-            <Link href="#" className="hover:text-white transition-colors">PRIVACY POLICY</Link>
+            <Link href="#" className="hover:text-foreground transition-colors">TERMS & CONDITION</Link>
+            <Link href="#" className="hover:text-foreground transition-colors">PRIVACY POLICY</Link>
           </div>
         </div>
       </div>
 
       {/* Massive Background Typography overlapping the bottom */}
       <h1 
-        className="absolute bottom-[-10%] md:bottom-[-20%] left-1/2 -translate-x-1/2 text-[20vw] font-bold text-white/[0.02] tracking-tighter w-full text-center select-none pointer-events-none"
+        className="absolute bottom-[-10%] md:bottom-[-20%] left-1/2 -translate-x-1/2 text-[20vw] font-bold text-foreground/[0.02] tracking-tighter w-full text-center select-none pointer-events-none"
         style={{ transformStyle: "preserve-3d", transform: "translateX(-50%) rotateX(20deg)" }}
       >
         TRIVRO.AI

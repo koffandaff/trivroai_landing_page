@@ -47,7 +47,7 @@ export default function Home() {
           whileHover={{ scale: 1.1, x: -5 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => setIsContactOpen(true)}
-          className="w-14 h-14 bg-accent rounded-full flex items-center justify-center text-black shadow-[0_4px_20px_rgba(229,208,140,0.3)] cursor-pointer hover:bg-white transition-all z-50"
+          className="w-14 h-14 bg-accent rounded-full flex items-center justify-center text-black shadow-[0_4px_20px_rgba(229,208,140,0.3)] cursor-pointer hover:bg-foreground transition-all z-50"
         >
           <MessageCircle size={24} />
         </motion.button>
@@ -56,7 +56,7 @@ export default function Home() {
           whileHover={{ scale: 1.1, x: -5 }}
           whileTap={{ scale: 0.95 }}
           onClick={scrollToTop}
-          className="w-12 h-12 bg-white/5 backdrop-blur-md border border-white/10 rounded-full flex items-center justify-center text-white/50 hover:text-white hover:bg-white/10 transition-all cursor-pointer"
+          className="w-12 h-12 bg-foreground/5 backdrop-blur-md border border-foreground/10 rounded-full flex items-center justify-center text-muted hover:text-foreground hover:bg-foreground/10 transition-all cursor-pointer"
         >
           <ArrowUp size={20} />
         </motion.button>
@@ -77,24 +77,24 @@ export default function Home() {
             className="relative w-full max-w-md"
           >
             <GlassCard variant="dark" className="p-8 border-accent/10">
-              <h3 className="text-2xl font-bold text-white mb-2">Contact Us</h3>
-              <p className="text-sm text-white/40 mb-6">Get in touch with the Trivro AI team.</p>
+              <h3 className="text-2xl font-bold text-foreground mb-2">Contact Us</h3>
+              <p className="text-sm text-muted mb-6">Get in touch with the Trivro AI team.</p>
               <form className="flex flex-col gap-4">
                 <div className="flex flex-col gap-2">
-                  <label className="text-xs text-white/50 font-medium uppercase tracking-wider">Full Name</label>
+                  <label className="text-xs text-muted font-medium uppercase tracking-wider">Full Name</label>
                   <input
                     id="contact-name"
                     type="text"
-                    className="bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-accent/40 transition-colors placeholder:text-white/20"
+                    className="bg-foreground/[0.04] border border-foreground/[0.08] rounded-xl px-4 py-3 text-foreground text-sm outline-none focus:border-accent/40 transition-colors placeholder:text-foreground/20"
                     placeholder="John Doe"
                   />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label className="text-xs text-white/50 font-medium uppercase tracking-wider">Email Address</label>
+                  <label className="text-xs text-muted font-medium uppercase tracking-wider">Email Address</label>
                   <input
                     id="contact-email"
                     type="email"
-                    className="bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-accent/40 transition-colors placeholder:text-white/20"
+                    className="bg-foreground/[0.04] border border-foreground/[0.08] rounded-xl px-4 py-3 text-foreground text-sm outline-none focus:border-accent/40 transition-colors placeholder:text-foreground/20"
                     placeholder="john@company.com"
                   />
                 </div>

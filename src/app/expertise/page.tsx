@@ -81,7 +81,7 @@ export default function ExpertisePage() {
               Built for Founders who want <br />
               <span className="text-accent italic pr-2">Speed, Clarity, and Ownership.</span>
             </h1>
-            <p className="text-white/45 text-base md:text-lg max-w-2xl leading-relaxed">
+            <p className="text-muted text-base md:text-lg max-w-2xl leading-relaxed">
               We help founders and businesses replace agency dependency with powerful in-house AI marketing systems that deliver faster execution, better leads, and full control.
             </p>
           </motion.div>
@@ -97,8 +97,8 @@ export default function ExpertisePage() {
                 <div className="w-12 h-12 rounded-xl bg-accent/10 border border-accent/15 flex items-center justify-center mb-6 text-accent group-hover:scale-110 transition-transform">
                   {card.icon}
                 </div>
-                <h3 className="text-lg font-bold text-white mb-3">{card.title}</h3>
-                <p className="text-white/40 text-sm leading-relaxed">{card.desc}</p>
+                <h3 className="text-lg font-bold text-foreground mb-3">{card.title}</h3>
+                <p className="text-muted text-sm leading-relaxed">{card.desc}</p>
               </GlassCard>
             ))}
           </div>
@@ -117,7 +117,7 @@ export default function ExpertisePage() {
             <h2 className="text-3xl md:text-5xl font-normal text-foreground mb-4 tracking-tight">
               Why Businesses <span className="text-accent italic pr-2">Trust Trivro AI</span>
             </h2>
-            <p className="text-xs font-bold text-white/30 tracking-[0.15em] uppercase">
+            <p className="text-xs font-bold text-muted tracking-[0.15em] uppercase">
               TRUSTED. PROVEN. BUILT FOR RESULTS.
             </p>
           </motion.div>
@@ -134,8 +134,8 @@ export default function ExpertisePage() {
               >
                 <CheckCircle2 size={20} className="text-accent mt-1 shrink-0" />
                 <div>
-                  <h4 className="font-bold text-white mb-2">{point.title}</h4>
-                  <p className="text-sm text-white/40 leading-relaxed">{point.desc}</p>
+                  <h4 className="font-bold text-foreground mb-2">{point.title}</h4>
+                  <p className="text-sm text-muted leading-relaxed">{point.desc}</p>
                 </div>
               </motion.div>
             ))}

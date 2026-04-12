@@ -59,7 +59,7 @@ export default function ResourcesPage() {
             <h1 className="text-4xl md:text-6xl font-normal text-foreground mb-5 tracking-tight">
               Documentation
             </h1>
-            <p className="text-white/45 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+            <p className="text-muted text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
               Everything you need to understand, configure, and use Trivro AI effectively. This documentation covers platform basics, core features, and best practices.
             </p>
           </motion.div>
@@ -83,20 +83,20 @@ export default function ResourcesPage() {
               >
                 <button
                   onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
-                  className="w-full flex items-start gap-4 px-6 py-5 text-left hover:bg-white/[0.02] transition-colors cursor-pointer"
+                  className="w-full flex items-start gap-4 px-6 py-5 text-left hover:bg-foreground/[0.02] transition-colors cursor-pointer"
                 >
-                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 mt-0.5 ${openIndex === idx ? "bg-accent/15 text-accent" : "bg-white/[0.04] text-white/30"} transition-colors`}>
+                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 mt-0.5 ${openIndex === idx ? "bg-accent/15 text-accent" : "bg-foreground/[0.04] text-muted"} transition-colors`}>
                     <FileText size={18} />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className={`font-bold mb-1 ${openIndex === idx ? "text-accent" : "text-white"} transition-colors`}>
+                    <h3 className={`font-bold mb-1 ${openIndex === idx ? "text-accent" : "text-foreground"} transition-colors`}>
                       {doc.title}
                     </h3>
-                    <p className="text-sm text-white/40 leading-relaxed">{doc.desc}</p>
+                    <p className="text-sm text-muted leading-relaxed">{doc.desc}</p>
                   </div>
                   <ChevronDown
                     size={18}
-                    className={`text-white/30 shrink-0 mt-2 transition-transform duration-300 ${openIndex === idx ? "rotate-180 text-accent" : ""}`}
+                    className={`text-muted shrink-0 mt-2 transition-transform duration-300 ${openIndex === idx ? "rotate-180 text-accent" : ""}`}
                   />
                 </button>
 
@@ -112,7 +112,7 @@ export default function ResourcesPage() {
                       <div className="px-6 pb-6 pl-20">
                         <div className="grid grid-cols-2 gap-2">
                           {doc.content.items.map((item, i) => (
-                            <div key={i} className="flex items-center gap-2 text-sm text-white/50">
+                            <div key={i} className="flex items-center gap-2 text-sm text-muted">
                               <div className="w-1.5 h-1.5 rounded-full bg-accent/50" />
                               {item}
                             </div>

@@ -23,12 +23,12 @@ export const PremiumButton = ({
 }: PremiumButtonProps) => {
   const variants = {
     primary:
-      "bg-accent text-black hover:bg-white border border-accent/20 shadow-[0_4px_20px_rgba(229,208,140,0.15)]",
+      "bg-accent text-background hover:bg-foreground hover:text-background border border-accent/20 shadow-[0_4px_20px_rgba(229,208,140,0.15)]",
     secondary:
-      "bg-white/5 text-white hover:bg-white/10 border border-white/10",
+      "bg-foreground/5 text-foreground hover:bg-foreground/10 border border-foreground/10",
     outline:
-      "border border-accent/30 text-accent hover:text-white hover:bg-accent/10 hover:border-accent/60",
-    ghost: "text-white/60 hover:text-white hover:bg-white/5",
+      "border border-accent/30 text-accent hover:text-foreground hover:bg-accent/10 hover:border-accent/60",
+    ghost: "text-muted hover:text-foreground hover:bg-foreground/5",
   };
 
   const sizes = {

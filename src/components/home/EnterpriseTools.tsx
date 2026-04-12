@@ -36,10 +36,10 @@ export const EnterpriseTools = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4 tracking-tight">
             Integrated AI Marketing <span className="text-gradient-accent">Powerhouses</span>
           </h2>
-          <p className="text-white/45 max-w-2xl mx-auto text-base leading-relaxed">
+          <p className="text-muted max-w-2xl mx-auto text-base leading-relaxed">
             A suite of specialized enterprise tools designed to automate your most critical marketing operations.
           </p>
         </motion.div>
@@ -50,11 +50,11 @@ export const EnterpriseTools = () => {
               <div className="w-12 h-12 rounded-xl bg-accent/10 border border-accent/15 flex items-center justify-center mb-6 text-accent group-hover:scale-110 transition-transform">
                 {tool.icon}
               </div>
-              <h3 className="text-xl font-bold text-white mb-1">{tool.title}</h3>
+              <h3 className="text-xl font-bold text-foreground mb-1">{tool.title}</h3>
               <p className="text-accent text-xs font-bold tracking-[0.1em] uppercase mb-4">
                 {tool.tagline}
               </p>
-              <p className="text-white/40 text-sm leading-relaxed">{tool.desc}</p>
+              <p className="text-muted text-sm leading-relaxed">{tool.desc}</p>
             </GlassCard>
           ))}
         </div>

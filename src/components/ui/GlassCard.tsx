@@ -17,9 +17,9 @@ export const GlassCard = ({
   hover = true,
 }: GlassCardProps) => {
   const variants = {
-    default: "bg-[#1C1C1E] border border-white/[0.06] hover:border-accent/30",
-    accent: "bg-[#1C1C1E] border border-accent/20 hover:border-accent/40",
-    dark: "bg-[#0D0D0E] border border-white/[0.04] hover:border-accent/20",
+    default: "bg-card border border-card-border hover:border-accent/30",
+    accent: "bg-card border border-accent/20 hover:border-accent/40",
+    dark: "bg-background border border-card-border hover:border-accent/20",
   };
 
   return (
@@ -31,7 +31,7 @@ export const GlassCard = ({
       className={cn(
         "relative overflow-hidden rounded-[2rem] transition-all duration-500",
         variants[variant],
-        !hover && "hover:border-white/[0.04] hover:bg-background-secondary",
+        !hover && "hover:border-foreground/[0.04] hover:bg-background-secondary",
         className
       )}
     >

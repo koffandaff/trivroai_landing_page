@@ -63,16 +63,16 @@ export const ProblemSolution = () => {
                 <div className="w-11 h-11 rounded-xl bg-accent/10 border border-accent/15 flex items-center justify-center text-accent">
                   {item.icon}
                 </div>
-                <h3 className="text-xl font-bold text-white">{item.title}</h3>
+                <h3 className="text-xl font-bold text-foreground">{item.title}</h3>
               </div>
 
               {/* Challenge */}
               <div className="mb-5">
                 <div className="flex items-center gap-2 mb-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-white/30" />
-                  <span className="text-xs font-bold text-white/40 tracking-[0.1em] uppercase">THE CHALLENGE</span>
+                  <div className="w-1.5 h-1.5 rounded-full bg-foreground/30" />
+                  <span className="text-xs font-bold text-muted tracking-[0.1em] uppercase">THE CHALLENGE</span>
                 </div>
-                <p className="text-white/40 text-sm leading-relaxed">{item.challenge}</p>
+                <p className="text-muted text-sm leading-relaxed">{item.challenge}</p>
               </div>
 
               {/* Solution */}
@@ -81,13 +81,13 @@ export const ProblemSolution = () => {
                   <div className="w-1.5 h-1.5 rounded-full bg-accent" />
                   <span className="text-xs font-bold text-accent tracking-[0.1em] uppercase">THE SOLUTION</span>
                 </div>
-                <p className="text-white/70 text-sm leading-relaxed font-medium">{item.solution}</p>
+                <p className="text-muted text-sm leading-relaxed font-medium">{item.solution}</p>
               </div>
 
               {/* Bullets */}
               <ul className="flex flex-col gap-2 mb-6">
                 {item.bullets.map((bullet, bi) => (
-                  <li key={bi} className="flex items-center gap-2 text-sm text-white/50">
+                  <li key={bi} className="flex items-center gap-2 text-sm text-muted">
                     <div className="w-1.5 h-1.5 rounded-full bg-accent/60" />
                     {bullet}
                   </li>

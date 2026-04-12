@@ -39,7 +39,7 @@ export default function CustomWorkflowsPage() {
             <h1 className="text-4xl md:text-6xl font-normal text-foreground mb-6 tracking-tight leading-none">
               Custom <span className="text-accent italic">Workflows</span>
             </h1>
-            <p className="text-white/45 text-base md:text-lg max-w-2xl leading-relaxed">
+            <p className="text-muted text-base md:text-lg max-w-2xl leading-relaxed">
               Every organization operates differently. Trivro AI adapts to your internal processes instead of forcing rigid workflows on your team.
             </p>
           </motion.div>
@@ -49,15 +49,15 @@ export default function CustomWorkflowsPage() {
       {/* What You Can Customize */}
       <section className="px-6 mb-20 relative z-10">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl font-bold text-white mb-8">What You Can Customize</h2>
+          <h2 className="text-2xl font-bold text-foreground mb-8">What You Can Customize</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {customizations.map((item, idx) => (
               <GlassCard key={idx} className="p-6 group">
                 <div className="w-11 h-11 rounded-xl bg-accent/10 border border-accent/15 flex items-center justify-center mb-5 text-accent group-hover:scale-110 transition-transform">
                   {item.icon}
                 </div>
-                <h3 className="font-bold text-white mb-2">{item.title}</h3>
-                <p className="text-sm text-white/40 leading-relaxed">{item.desc}</p>
+                <h3 className="font-bold text-foreground mb-2">{item.title}</h3>
+                <p className="text-sm text-muted leading-relaxed">{item.desc}</p>
               </GlassCard>
             ))}
           </div>
@@ -67,9 +67,9 @@ export default function CustomWorkflowsPage() {
       {/* Speed + Consistency Banner */}
       <section className="px-6 relative z-10">
         <div className="max-w-5xl mx-auto">
-          <div className="rounded-3xl bg-gradient-to-br from-[#161618] to-[#111112] border border-accent/10 p-10 md:p-14 shadow-[0_0_60px_rgba(229,208,140,0.06)]">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Speed + Consistency</h3>
-            <p className="text-white/45 leading-relaxed max-w-2xl">
+          <div className="rounded-3xl bg-gradient-to-br from-card to-background border border-accent/10 p-10 md:p-14 shadow-lg">
+            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Speed + Consistency</h3>
+            <p className="text-muted leading-relaxed max-w-2xl">
               Custom workflows allow enterprises to maintain consistency while giving teams flexibility to execute faster. Maintain your competitive edge without operational friction.
             </p>
           </div>

@@ -15,12 +15,12 @@ export const StrategySession = () => {
           viewport={{ once: true }}
         >
           <span className="badge mb-6 inline-flex">Limited onboarding slots available</span>
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4 tracking-tight">
             Book a <span className="text-gradient-accent">1:1 Strategy Session</span>
           </h2>
-          <p className="text-white/45 text-base md:text-lg mb-2 leading-relaxed">
+          <p className="text-muted text-base md:text-lg mb-2 leading-relaxed">
             One-time setup guidance to help you launch faster.{" "}
-            <span className="line-through text-white/30">₹299</span>{" "}
+            <span className="line-through text-muted">₹299</span>{" "}
             <span className="text-accent font-semibold">Free</span>
           </p>
           <div className="mt-8">

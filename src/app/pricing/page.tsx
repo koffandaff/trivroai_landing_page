@@ -104,16 +104,16 @@ export default function PricingPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                 {/* Traditional */}
                 <div className="text-left">
-                  <p className="text-xs font-bold text-white/20 tracking-[0.12em] uppercase mb-6">TRADITIONAL APPROACH</p>
+                  <p className="text-xs font-bold text-foreground/20 tracking-[0.12em] uppercase mb-6">TRADITIONAL APPROACH</p>
                   {comparisonData.traditional.map((item, i) => (
-                    <div key={i} className="flex justify-between items-center py-3 border-b border-white/[0.04]">
-                      <span className="text-sm text-white/50">{item.item}</span>
-                      <span className="text-sm font-semibold text-white/60">{item.cost}</span>
+                    <div key={i} className="flex justify-between items-center py-3 border-b border-foreground/[0.04]">
+                      <span className="text-sm text-muted">{item.item}</span>
+                      <span className="text-sm font-semibold text-muted">{item.cost}</span>
                     </div>
                   ))}
                   <div className="mt-6 flex items-baseline gap-2">
                     <span className="text-3xl font-medium text-red-500/70">₹2L - 5.5L</span>
-                    <span className="text-white/20 text-sm uppercase">/mo</span>
+                    <span className="text-foreground/20 text-sm uppercase">/mo</span>
                   </div>
                 </div>
 
@@ -139,7 +139,7 @@ export default function PricingPage() {
           </motion.div>
 
           {/* Quick links */}
-          <div className="flex flex-wrap justify-center gap-10 mt-12 text-[10px] font-bold text-white/30 tracking-[0.2em] uppercase">
+          <div className="flex flex-wrap justify-center gap-10 mt-12 text-[10px] font-bold text-muted tracking-[0.2em] uppercase">
             <Link href="/#solutions" className="hover:text-accent transition-colors flex items-center gap-2">
               EXPLORE 51+ AI TOOLS <ArrowRight size={12} />
             </Link>
@@ -188,10 +188,10 @@ export default function PricingPage() {
                   <p className="text-accent text-[10px] font-bold uppercase tracking-[0.15em] mb-2">{plan.tag}</p>
                   <p className="text-muted text-sm mb-8 font-light">{plan.tagline}</p>
 
-                  <div className="border-t border-white/[0.05] pt-8 mb-8 flex-1">
+                  <div className="border-t border-foreground/[0.05] pt-8 mb-8 flex-1">
                     <ul className="flex flex-col gap-4">
                       {plan.features.map((f, fi) => (
-                        <li key={fi} className="flex items-start gap-4 text-sm text-foreground/70 font-light">
+                        <li key={fi} className="flex items-start gap-4 text-sm text-muted font-light">
                           <CheckCircle2 size={16} className="text-accent/60 mt-0.5 shrink-0" />
                           {f}
                         </li>
@@ -202,8 +202,8 @@ export default function PricingPage() {
                   <button
                     className={`w-full py-4 rounded-full text-xs font-bold uppercase tracking-[0.2em] transition-all flex items-center justify-center gap-2 ${
                       plan.popular 
-                        ? "bg-accent text-black hover:bg-white" 
-                        : "bg-white/5 border border-white/10 text-white hover:bg-white/10"
+                        ? "bg-accent text-black hover:bg-foreground" 
+                        : "bg-foreground/5 border border-foreground/10 text-foreground hover:bg-foreground/10"
                     }`}
                   >
                     {plan.cta} <ArrowRight size={14} />
@@ -213,7 +213,7 @@ export default function PricingPage() {
             ))}
           </div>
 
-          <p className="text-center text-[10px] text-white/20 tracking-[0.25em] uppercase mt-20 font-medium">
+          <p className="text-center text-[10px] text-foreground/20 tracking-[0.25em] uppercase mt-20 font-medium">
             BILLED VIA RAZORPAY SECURE • HIGH-PERFORMANCE INFRASTRUCTURE • NO HIDDEN COSTS
           </p>
         </div>

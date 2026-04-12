@@ -31,7 +31,7 @@ export const ExecutionSteps = () => {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-6xl font-bold text-white tracking-tight">
+          <h2 className="text-4xl md:text-6xl font-bold text-foreground tracking-tight">
             Execution. Rapid Growth.
           </h2>
         </motion.div>
@@ -49,8 +49,8 @@ export const ExecutionSteps = () => {
               <div className="w-16 h-16 rounded-2xl border border-accent/20 bg-accent/5 flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-accent">{step.number}</span>
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
-              <p className="text-white/45 text-sm leading-relaxed max-w-xs mx-auto">{step.desc}</p>
+              <h3 className="text-xl font-bold text-foreground mb-3">{step.title}</h3>
+              <p className="text-muted text-sm leading-relaxed max-w-xs mx-auto">{step.desc}</p>
             </motion.div>
           ))}
         </div>

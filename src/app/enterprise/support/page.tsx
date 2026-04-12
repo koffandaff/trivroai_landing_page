@@ -39,7 +39,7 @@ export default function SupportPage() {
             <h1 className="text-4xl md:text-6xl font-normal text-foreground mb-6 tracking-tight leading-none">
               Support & <span className="text-accent italic">Onboarding</span>
             </h1>
-            <p className="text-white/45 text-base md:text-lg max-w-2xl leading-relaxed">
+            <p className="text-muted text-base md:text-lg max-w-2xl leading-relaxed">
               We ensure enterprises can adopt Trivro AI smoothly with guided onboarding and reliable support every step of the way.
             </p>
           </motion.div>
@@ -53,7 +53,7 @@ export default function SupportPage() {
           <div>
             <div className="flex items-center gap-3 mb-8">
               <Rocket size={22} className="text-accent" />
-              <h2 className="text-2xl font-bold text-white">Onboarding Process</h2>
+              <h2 className="text-2xl font-bold text-foreground">Onboarding Process</h2>
             </div>
             <div className="flex flex-col gap-4">
               {onboardingSteps.map((step, idx) => (
@@ -68,8 +68,8 @@ export default function SupportPage() {
                     <div className="flex items-start gap-4">
                       <span className="text-2xl font-bold text-accent/40">{step.num}</span>
                       <div>
-                        <h4 className="font-bold text-white mb-1">{step.title}</h4>
-                        <p className="text-sm text-white/40">{step.desc}</p>
+                        <h4 className="font-bold text-foreground mb-1">{step.title}</h4>
+                        <p className="text-sm text-muted">{step.desc}</p>
                       </div>
                     </div>
                   </GlassCard>
@@ -82,7 +82,7 @@ export default function SupportPage() {
           <div>
             <div className="flex items-center gap-3 mb-8">
               <Headphones size={22} className="text-accent" />
-              <h2 className="text-2xl font-bold text-white">Ongoing Support</h2>
+              <h2 className="text-2xl font-bold text-foreground">Ongoing Support</h2>
             </div>
             <div className="flex flex-col gap-4">
               {supportCards.map((card, idx) => (
@@ -97,8 +97,8 @@ export default function SupportPage() {
                     <div className="w-11 h-11 rounded-xl bg-accent/10 border border-accent/15 flex items-center justify-center mb-4 text-accent">
                       {card.icon}
                     </div>
-                    <h4 className="font-bold text-white mb-2">{card.title}</h4>
-                    <p className="text-sm text-white/40 mb-4 leading-relaxed">{card.desc}</p>
+                    <h4 className="font-bold text-foreground mb-2">{card.title}</h4>
+                    <p className="text-sm text-muted mb-4 leading-relaxed">{card.desc}</p>
                     <Link href="#" className="text-accent text-xs font-bold tracking-[0.1em] uppercase flex items-center gap-2 hover:gap-3 transition-all">
                       {card.cta} <ArrowRight size={14} />
                     </Link>

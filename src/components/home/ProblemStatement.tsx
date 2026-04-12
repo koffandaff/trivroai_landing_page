@@ -30,10 +30,10 @@ export const ProblemStatement = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-5 tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-5 tracking-tight">
             Marketing Is Broken for Most Businesses
           </h2>
-          <p className="text-white/45 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+          <p className="text-muted max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
             Most AI tools add more complexity instead of solving the real problem. Businesses today struggle with fragmented systems.
           </p>
         </motion.div>
@@ -44,8 +44,8 @@ export const ProblemStatement = () => {
               <div className="w-11 h-11 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-6">
                 <AlertCircle size={20} className="text-accent" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">{problem.title}</h3>
-              <p className="text-white/45 leading-relaxed text-sm">{problem.desc}</p>
+              <h3 className="text-xl font-bold text-foreground mb-3">{problem.title}</h3>
+              <p className="text-muted leading-relaxed text-sm">{problem.desc}</p>
             </GlassCard>
           ))}
         </div>

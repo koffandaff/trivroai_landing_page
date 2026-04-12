@@ -43,7 +43,7 @@ export const ExpandableCarousel = ({ items, className }: ExpandableCarouselProps
             }}
             className={cn(
               "relative rounded-2xl overflow-hidden cursor-pointer group glass-card transition-colors duration-500",
-              isExpanded ? "border-accent/40" : "border-white/5 hover:border-white/10"
+              isExpanded ? "border-accent/40" : "border-foreground/5 hover:border-foreground/10"
             )}
           >
             {/* Background Gradient */}
@@ -68,7 +68,7 @@ export const ExpandableCarousel = ({ items, className }: ExpandableCarouselProps
                 transition={{ duration: 0.3, delay: isExpanded ? 0.1 : 0 }}
                 className={cn("flex flex-col gap-3", !isExpanded && "pointer-events-none")}
               >
-                <h3 className="text-2xl md:text-3xl font-bold text-white tracking-tight leading-none">
+                <h3 className="text-2xl md:text-3xl font-bold text-foreground tracking-tight leading-none">
                   {item.title}
                 </h3>
                 <p className="text-sm text-foreground-muted line-clamp-3">
