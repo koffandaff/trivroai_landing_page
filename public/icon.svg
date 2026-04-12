@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="96" fill="#111112"/>
+  <g transform="translate(256, 256)">
+    <!-- Outer star shape -->
+    <path d="M0,-140 L18,-18 L140,0 L18,18 L0,140 L-18,18 L-140,0 L-18,-18 Z" fill="#E5D08C" opacity="0.3"/>
+    <!-- Inner star shape -->
+    <path d="M0,-90 L12,-12 L90,0 L12,12 L0,90 L-12,12 L-90,0 L-12,-12 Z" fill="#E5D08C" opacity="0.7"/>
+    <!-- Center dot -->
+    <circle cx="0" cy="0" r="16" fill="#E5D08C"/>
+  </g>
+  <!-- Brand letter T -->
+  <text x="256" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="200" fill="#E5D08C" letter-spacing="-8">T</text>
+</svg>
