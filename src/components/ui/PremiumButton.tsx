@@ -3,6 +3,7 @@
 
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { showComingSoon } from "./ComingSoonModal";
 
 interface PremiumButtonProps {
   children: React.ReactNode;
@@ -44,7 +45,7 @@ export const PremiumButton = ({
     className
   );
 
-  if (href) {
+  if (href && href !== "#") {
     return (
       <Link href={href} className={buttonClasses}>
         {children}
@@ -52,9 +53,17 @@ export const PremiumButton = ({
     );
   }
 
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    if (onClick) {
+      onClick(e);
+    } else if (!href || href === "#") {
+      showComingSoon();
+    }
+  };
+
   return (
     <button
-      onClick={onClick}
+      onClick={handleClick}
       className={buttonClasses}
     >
       {children}

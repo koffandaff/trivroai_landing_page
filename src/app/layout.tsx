@@ -3,7 +3,8 @@ import { Navbar } from "@/components/ui/Navbar";
 import { Footer } from "@/components/ui/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Metadata } from "next";
-
+import { Toaster } from "sonner";
+import { ComingSoonModal } from "@/components/ui/ComingSoonModal";
 export const metadata: Metadata = {
   title: "Trivro AI | India's Best AI Marketing Tools Ecosystem",
   description:
@@ -41,6 +42,8 @@ export default function RootLayout({
           <Navbar />
           <main>{children}</main>
           <Footer />
+          <Toaster />
+          <ComingSoonModal />
         </ThemeProvider>
       </body>
     </html>

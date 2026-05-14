@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { ArrowRight, CalendarDays } from "lucide-react";
+import { showComingSoon } from "@/components/ui/ComingSoonModal";
 
 const updates = [
   {
@@ -87,9 +88,9 @@ export default function WhatsNewPage() {
                   <p className="text-muted leading-relaxed mb-6">
                     {update.desc}
                   </p>
-                  <a href={update.link} className="inline-flex items-center gap-2 text-sm text-accent font-bold uppercase tracking-[0.15em] hover:opacity-80 transition-opacity">
+                  <button onClick={() => showComingSoon()} className="inline-flex items-center gap-2 text-sm text-accent font-bold uppercase tracking-[0.15em] hover:opacity-80 transition-opacity cursor-pointer bg-transparent border-none p-0 text-left">
                     View Details <ArrowRight size={16} />
-                  </a>
+                  </button>
                 </div>
               </GlassCard>
             </motion.div>

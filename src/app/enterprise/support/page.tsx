@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Rocket, Headphones, BookOpen, ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { showComingSoon } from "@/components/ui/ComingSoonModal";
 
 const onboardingSteps = [
   { num: "01", title: "Initial Platform Walkthrough", desc: "A comprehensive tour of core features and capabilities." },
@@ -99,9 +99,9 @@ export default function SupportPage() {
                     </div>
                     <h4 className="font-bold text-foreground mb-2">{card.title}</h4>
                     <p className="text-sm text-muted mb-4 leading-relaxed">{card.desc}</p>
-                    <Link href="#" className="text-accent text-xs font-bold tracking-[0.1em] uppercase flex items-center gap-2 hover:gap-3 transition-all">
+                    <button onClick={() => showComingSoon()} className="text-accent text-xs font-bold tracking-[0.1em] uppercase flex items-center gap-2 hover:gap-3 transition-all cursor-pointer bg-transparent border-none p-0 text-left">
                       {card.cta} <ArrowRight size={14} />
-                    </Link>
+                    </button>
                   </GlassCard>
                 </motion.div>
               ))}

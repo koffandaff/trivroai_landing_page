@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { showComingSoon } from "@/components/ui/ComingSoonModal";
 
 const faqs = [
   {
@@ -80,12 +80,12 @@ export const FAQ = () => {
           viewport={{ once: true }}
           className="text-center mt-10"
         >
-          <Link
-            href="#"
-            className="text-accent text-xs font-bold tracking-[0.1em] uppercase inline-flex items-center gap-2 hover:gap-3 transition-all"
+          <button
+            onClick={() => showComingSoon()}
+            className="text-accent text-xs font-bold tracking-[0.1em] uppercase inline-flex items-center gap-2 hover:gap-3 transition-all bg-transparent border-none p-0 cursor-pointer"
           >
             VIEW ALL FREQUENTLY ASKED QUESTIONS <ArrowRight size={14} />
-          </Link>
+          </button>
         </motion.div>
       </div>
     </section>

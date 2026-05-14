@@ -2,6 +2,7 @@
 
 import React, { useRef, useEffect, ReactNode, CSSProperties } from "react";
 import { cn } from "@/lib/utils";
+import { showComingSoon } from "./ComingSoonModal";
 
 interface StarBackgroundProps {
   color?: string;
@@ -70,6 +71,14 @@ export function StarButton({
     }
   }, []);
 
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    if (props.onClick) {
+      props.onClick(e);
+    } else {
+      showComingSoon();
+    }
+  };
+
   return (
     <button
       style={
@@ -87,6 +96,7 @@ export function StarButton({
         className,
       )}
       {...props}
+      onClick={handleClick}
     >
       <div
         className="absolute aspect-square inset-0 animate-star-btn bg-[radial-gradient(ellipse_at_center,var(--light-color),transparent,transparent)]"

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { ArrowUpRight } from "lucide-react";
+import { showComingSoon } from "@/components/ui/ComingSoonModal";
 
 export default function CaseStudiesPage() {
   return (
@@ -37,9 +38,9 @@ export default function CaseStudiesPage() {
               <h3 className="text-3xl font-bold text-foreground mb-2 group-hover:underline decoration-accent underline-offset-4 decoration-2">Acme Retail</h3>
               <p className="text-muted mb-6 max-w-sm">(placeholder) Detailed overview of how Acme Retail structured their marketing system with Trivro AI.</p>
               
-              <div className="flex items-center gap-2 text-sm text-foreground font-medium uppercase tracking-wider group-hover:text-accent transition-colors">
+              <button onClick={() => showComingSoon()} className="flex items-center gap-2 text-sm text-foreground font-medium uppercase tracking-wider group-hover:text-accent transition-colors cursor-pointer bg-transparent border-none p-0 text-left">
                 View Case <ArrowUpRight size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-              </div>
+              </button>
             </div>
           </GlassCard>
 
@@ -53,9 +54,9 @@ export default function CaseStudiesPage() {
               <h3 className="text-3xl font-bold text-foreground mb-2 group-hover:underline decoration-accent underline-offset-4 decoration-2">Bright Agency</h3>
               <p className="text-muted mb-6 max-w-sm">(placeholder) How Bright Agency scaled client delivery using centralized AI workflows.</p>
               
-              <div className="flex items-center gap-2 text-sm text-foreground font-medium uppercase tracking-wider group-hover:text-accent transition-colors">
+              <button onClick={() => showComingSoon()} className="flex items-center gap-2 text-sm text-foreground font-medium uppercase tracking-wider group-hover:text-accent transition-colors cursor-pointer bg-transparent border-none p-0 text-left">
                 View Case <ArrowUpRight size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-              </div>
+              </button>
             </div>
           </GlassCard>
         </div>

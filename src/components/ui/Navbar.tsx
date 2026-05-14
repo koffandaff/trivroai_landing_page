@@ -6,6 +6,7 @@ import { Menu, X, ChevronDown, Sun, Moon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { useTheme } from "@/components/ThemeProvider";
+import { showComingSoon } from "@/components/ui/ComingSoonModal";
 
 const navItems = [
   { name: "Solutions", href: "/#solutions" },
@@ -213,9 +214,9 @@ export const Navbar = () => {
               ))}
             </div>
             <div className="mt-12 flex flex-col gap-4">
-              <Link href="#" className="text-center py-4 font-bold uppercase tracking-[0.2em] rounded-full bg-accent text-background hover:bg-foreground hover:text-background transition-all text-xs">
+              <button onClick={() => showComingSoon()} className="text-center py-4 font-bold uppercase tracking-[0.2em] rounded-full bg-accent text-background hover:bg-foreground hover:text-background transition-all text-xs">
                 Book a Demo
-              </Link>
+              </button>
               <button
                 onClick={toggleTheme}
                 className="text-center py-4 font-medium uppercase tracking-[0.15em] rounded-full border border-card-border text-foreground hover:bg-foreground/5 transition-all text-xs flex items-center justify-center gap-2"

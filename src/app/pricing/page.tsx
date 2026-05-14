@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { ArrowRight, Zap, Shield, Crown, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
+import { showComingSoon } from "@/components/ui/ComingSoonModal";
 
 const comparisonData = {
   traditional: [
@@ -143,9 +144,9 @@ export default function PricingPage() {
             <Link href="/#solutions" className="hover:text-accent transition-colors flex items-center gap-2">
               EXPLORE 51+ AI TOOLS <ArrowRight size={12} />
             </Link>
-            <Link href="#" className="hover:text-accent transition-colors flex items-center gap-2">
+            <button onClick={() => showComingSoon()} className="hover:text-accent transition-colors flex items-center gap-2 cursor-pointer">
               BOOK A STRATEGY DEMO <ArrowRight size={12} />
-            </Link>
+            </button>
           </div>
         </div>
       </section>
@@ -200,6 +201,7 @@ export default function PricingPage() {
                   </div>
 
                   <button
+                    onClick={() => showComingSoon()}
                     className={`w-full py-4 rounded-full text-xs font-bold uppercase tracking-[0.2em] transition-all flex items-center justify-center gap-2 ${
                       plan.popular 
                         ? "bg-accent text-black hover:bg-foreground" 

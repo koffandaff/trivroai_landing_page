@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { StarButton } from "@/components/ui/star-button";
 import { DotPattern } from "@/components/ui/dot-pattern";
 import { ArrowRight } from "lucide-react";
+import { showComingSoon } from "@/components/ui/ComingSoonModal";
 
 export const FinalCTA = () => {
   return (
@@ -32,7 +33,10 @@ export const FinalCTA = () => {
             <StarButton>
               Book Your Demo <ArrowRight size={16} />
             </StarButton>
-            <button className="px-6 py-3 rounded-full border border-foreground/10 text-muted hover:bg-foreground/5 hover:text-foreground transition-all text-xs font-bold uppercase tracking-[0.15em]">
+            <button 
+              className="px-6 py-3 rounded-full border border-foreground/10 text-muted hover:bg-foreground/5 hover:text-foreground transition-all text-xs font-bold uppercase tracking-[0.15em]"
+              onClick={() => showComingSoon()}
+            >
               View Plans
             </button>
           </div>
@@ -45,10 +49,10 @@ export const FinalCTA = () => {
           viewport={{ once: true }}
           className="mt-20 flex flex-wrap items-center justify-center gap-8 text-xs font-semibold text-foreground/20 tracking-[0.15em] uppercase"
         >
-          <span className="hover:text-accent transition-colors cursor-pointer">AI Tools Ecosystem</span>
-          <span className="hover:text-accent transition-colors cursor-pointer">Platform Comparison</span>
-          <span className="hover:text-accent transition-colors cursor-pointer">Industry Use Cases</span>
-          <span className="hover:text-accent transition-colors cursor-pointer">Customer Reviews</span>
+          <button onClick={() => showComingSoon()} className="hover:text-accent transition-colors cursor-pointer uppercase bg-transparent border-none p-0 text-foreground/20 font-semibold text-xs tracking-[0.15em]">AI Tools Ecosystem</button>
+          <button onClick={() => showComingSoon()} className="hover:text-accent transition-colors cursor-pointer uppercase bg-transparent border-none p-0 text-foreground/20 font-semibold text-xs tracking-[0.15em]">Platform Comparison</button>
+          <button onClick={() => showComingSoon()} className="hover:text-accent transition-colors cursor-pointer uppercase bg-transparent border-none p-0 text-foreground/20 font-semibold text-xs tracking-[0.15em]">Industry Use Cases</button>
+          <button onClick={() => showComingSoon()} className="hover:text-accent transition-colors cursor-pointer uppercase bg-transparent border-none p-0 text-foreground/20 font-semibold text-xs tracking-[0.15em]">Customer Reviews</button>
         </motion.div>
       </div>
     </section>
